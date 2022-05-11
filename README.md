@@ -1,6 +1,7 @@
 # Tekton challenge
 ## Guillermo López Velarde González
 
+### Instrucciones de uso
 Para probar, envíar el siguiente JSON vía POST al siguiente endpoint:
 https://maxareagetter-dvo4sj4zhq-uc.a.run.app/tekton/max_area_getter/1.0.0
 {
@@ -14,6 +15,11 @@ docker run -d -p 8080:8080 --name MaxAreaGetter dockerfile
 y después, hacer la petición local a la URL:
 http://127.0.0.1:8080/tekton/max_area_getter/1.0.0
 
+### Instrucciones para correr las pruebas
+Colocarse en el root del repositorio (afuera de src) y correr:
+pipenv install --dev
+pipenv run pytest
+
 ### Requerimientos:
 Unit testing: 
 https://github.com/GuillermoLvG/challenge/tree/feature/max_area_getter_service/test/bp
@@ -24,11 +30,10 @@ y el código en flask:
 https://github.com/GuillermoLvG/challenge/blob/feature/max_area_getter_service/src/endpoints/api_controller.py
 
 ### Extras:
-Me gustaria traer su atención a algunas cosas extras que he hecho:
+He agregado algunas cositas a la prueba:
 - Continuous Integration
 - Continuous Deployment
 - Integration Tests
-- Manejo de Git
 
 #### Continuous Integration:
 El repositorio tiene 3 ramas:
@@ -37,6 +42,7 @@ El repositorio tiene 3 ramas:
 - feature/max_area_getter_service
 
 He configurado en GCP que las pruebas (unitarias y de integración) se corran al momento de hacer un PR. En este paso podrían implementarse otros procesos como checar automaticamente buenas practicas en el código con algún pre-commit, o alguna otra cosa.
+![image](https://user-images.githubusercontent.com/21270714/167958706-06b382de-0839-4f91-a7e9-28a19254ecf0.png)
 
 #### Continuous Deployment:
 Al hacer push en la rama main, se despliega automaticamente el servicio en GCP.
