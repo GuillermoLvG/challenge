@@ -20,15 +20,6 @@ Colocarse en el root del repositorio (afuera de src) y correr:
 - pipenv install --dev
 - pipenv run pytest
 
-### Requerimientos:
-Unit testing: 
-https://github.com/GuillermoLvG/challenge/tree/feature/max_area_getter_service/test/bp
-Any python version: Utilicé 3.8
-Expose it as Rest API - Flask:
-https://maxareagetter-dvo4sj4zhq-uc.a.run.app/tekton/max_area_getter/1.0.0
-y el código en flask:
-https://github.com/GuillermoLvG/challenge/blob/feature/max_area_getter_service/src/endpoints/api_controller.py
-
 ### Extras:
 He agregado algunas cositas a la prueba:
 - Continuous Integration
