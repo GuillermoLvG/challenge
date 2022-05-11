@@ -3,22 +3,22 @@
 
 ### Instrucciones de uso
 Para probar, envíar el siguiente JSON vía POST al siguiente endpoint:
-https://maxareagetter-dvo4sj4zhq-uc.a.run.app/tekton/max_area_getter/1.0.0
-{
+- https://maxareagetter-dvo4sj4zhq-uc.a.run.app/tekton/max_area_getter/1.0.0
+- {
     "heights": [1,8,6,2,5,4,8,3,7]
-}
+}  
 
 Si se desea desplegar el servicio localmente, correr los siguientes comandos, con docker instalado:
-docker build -t dockerfile .
-docker run -d -p 8080:8080 --name MaxAreaGetter dockerfile
+- docker build -t dockerfile .
+- docker run -d -p 8080:8080 --name MaxAreaGetter dockerfile
 
 y después, hacer la petición local a la URL:
-http://127.0.0.1:8080/tekton/max_area_getter/1.0.0
+- http://127.0.0.1:8080/tekton/max_area_getter/1.0.0
 
 ### Instrucciones para correr las pruebas
 Colocarse en el root del repositorio (afuera de src) y correr:
-pipenv install --dev
-pipenv run pytest
+- pipenv install --dev
+- pipenv run pytest
 
 ### Requerimientos:
 Unit testing: 
