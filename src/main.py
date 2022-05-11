@@ -2,5 +2,5 @@ import endpoints.api_controller as controller
 
 app = controller.create_app()
 
-if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=8080)
+if __name__ == "__main__":
+    app.run(debug=False, host="0.0.0.0", port=8080)
