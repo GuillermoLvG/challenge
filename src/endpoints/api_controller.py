@@ -44,7 +44,7 @@ def create_app(
 
     @app.route("/tekton/max_area_getter/1.0.0", methods=["POST"])
     @expects_json(schema)
-    def set_answers_by_user(max_area_getter: MaxAreaGetter):
+    def calculate_max_area(max_area_getter: MaxAreaGetter):
         try:
             req_data = request.get_json()
             heights = req_data[HEIGHTS]
