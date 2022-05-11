@@ -1,0 +1,8 @@
+steps:
+  # This step runs the unit tests on the app
+  - name: "python:3.8-slim"
+    id: Test
+    entrypoint: /bin/sh
+    args:
+      - -c
+      - " pip install poetry && poetry export -f requirements.txt --without-hashes --output requirements.txt && pip install -r requirements.txt && pip install pytest && pytest test"
