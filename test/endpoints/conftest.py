@@ -1,17 +1,16 @@
-import injector
-import pytest
+import os
+
+import di.provider as provider
 import flask
 import flask_injector
 import injector
-import os
+import pytest
 from endpoints.api_controller import create_app
-import di.provider as provider
+
 
 @pytest.fixture
 def default_dependencies():
-    return {
-        'max_area_getter': provider.MaxAreaGetterModule()
-    }
+    return {"max_area_getter": provider.MaxAreaGetterModule()}
 
 
 @pytest.fixture
