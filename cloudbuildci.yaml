@@ -5,4 +5,4 @@ steps:
     entrypoint: /bin/sh
     args:
       - -c
-      - " pip install poetry && poetry export -f requirements.txt --without-hashes --output requirements.txt && pip install -r requirements.txt && pip install pytest && pytest test"
+      - " pip install pipenv && pipenv install --dev && pipenv run pytest"
